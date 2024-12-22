@@ -32,7 +32,7 @@ contract ERC721MetaTx {
 
     // Example of a function to mint NFT that can be called through meta-tx
     // The `functionSignature` would encode a call to `mintToken(to, tokenId)`
-    function mintToken(address to, uint256 tokenId) public {
+    function mintToken(address to, uint256 tokenId) internal {
         require(msg.sender == address(this), "Can only be called via executeMetaTransaction");
         // caller is the user who signed off-chain
         _owners[tokenId] = to;
