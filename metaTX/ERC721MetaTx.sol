@@ -4,9 +4,7 @@ pragma solidity ^0.8.24;
 contract ERC721MetaTx {
 
     mapping (uint256 => address) public _owners;
-    mapping( address => uint256) public owners;
-    address public trustedForwarder; // optional if using EIP-2771
-    uint public counter = 0; // optional if using EIP-771
+    uint public counter = 0; 
 
     // This is a simplified version, in reality you'd use EIP-2771 or a known pattern like ERC2771Context.
 
