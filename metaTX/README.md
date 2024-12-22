@@ -4,7 +4,7 @@ This repository demonstrates a **basic meta-transaction** setup using a **Solidi
 
 ## Overview
 
-A “meta-transaction” is a pattern that allows a user to request an on-chain action **without** directly paying gas. In this example:
+A “meta-transaction” is a pattern that allows a user to request an on-chain action **without** directly paying gas- the desired function is encoded together with the data wanted from the request. In this example:
 
 1. The user **signs** their request off-chain (using their private key in Java).
 2. The signed data is **forwarded** by a relayer or another trusted party (not shown here) that actually executes the transaction on-chain, paying the gas.
