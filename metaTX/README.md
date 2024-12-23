@@ -63,6 +63,8 @@ metaTX/
 - **Signs** that hash **off-chain** using the user’s private key.
 - **Prints** out the signed components (`r`, `s`, `v`) and the encoded call data.
 
+![Example](example.png)
+
 ### Dependencies
 
 - **Web3j** (e.g., version 4.x)
@@ -75,6 +77,7 @@ metaTX/
    - Create `Credentials` from user’s private key (`Credentials.create("<PRIVATE_KEY>")`).
 
 2. **Encode `mintToken(...)`**  
+
    ```java
    Function mintFunction = new Function(
        "mintToken",
@@ -91,10 +94,12 @@ metaTX/
    - Concatenate these byte arrays.
    - Apply `Hash.sha3(...)` to produce a Keccak-256 hash.
 
-4. **Sign the Hash**  
+4. **Sign the Hash** 
+
    ```java
    Sign.SignatureData signature = Sign.signPrefixedMessage(hash, userCredentials.getEcKeyPair());
    ```
+
    - Uses the same prefix logic as `toEthSignedMessageHash` in Solidity.
 
 5. **Extract and Print `r`, `s`, `v`**  
