@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="utf-8">
+  <title>ENS Search</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="./favi.ico" type="image/x-icon">
+  <script src="https://cdn.jsdelivr.net/npm/web3/dist/web3.min.js"></script>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>ENS Search (ETH)</h1>
+    <div id="connect-status" class="disconnected"></div>
+    <button id="connect-button" >Connect with MetaMask</button>
+    <input type="text" id="ens-input" placeholder="Enter ENS domain">
+    <button id="search-button" disabled>Search</button>
+    <div id="result"></div>
+    <p></p>
+    <button id="verify-button" disabled>Prove & Get THIS ENS</button>
+    <div id="verify-result"></div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/web3@1.7.3/dist/web3.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
